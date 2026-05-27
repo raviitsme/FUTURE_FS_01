@@ -61,16 +61,16 @@ const Navbar = () => {
             Home
           </a>
           <a
-            href="#"
-            className="relative text-white after:absolute after:left-1/2 after:-bottom-1 after:h-0.5 after:w-0 after:-translate-x-1/2 after:bg-linear-to-r after:from-cyan-400 after:to-purple-500 after:transition-all after:duration-300 hover:after:w-full"
-          >
-            About
-          </a>
-          <a
-            href="#"
-            className="relative text-white after:absolute after:left-1/2 after:-bottom-1 after:h-0.5 after:w-0 after:-translate-x-1/2 after:bg-linear-to-r after:from-cyan-400 after:to-purple-500 after:transition-all after:duration-300 hover:after:w-full"
+            onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior : "smooth" })}
+            className="relative cursor-pointer text-white after:absolute after:left-1/2 after:-bottom-1 after:h-0.5 after:w-0 after:-translate-x-1/2 after:bg-linear-to-r after:from-cyan-400 after:to-purple-500 after:transition-all after:duration-300 hover:after:w-full"
           >
             Projects
+          </a>
+          <a
+            onClick={() => document.getElementById("about")?.scrollIntoView({ behavior : "smooth" })}
+            className="relative text-white after:absolute after:left-1/2 after:-bottom-1 after:h-0.5 after:w-0 after:-translate-x-1/2 cursor-pointer after:bg-linear-to-r after:from-cyan-400 after:to-purple-500 after:transition-all after:duration-300 hover:after:w-full"
+          >
+            About
           </a>
         </div>
       </div>

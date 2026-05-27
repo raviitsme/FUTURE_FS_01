@@ -34,13 +34,16 @@ export default function Projects() {
     }),
   };
   return (
-    <section id="projects" className="relative min-h-screen w-full overflow-hidden bg-black flex justify-center">
+    <section
+      id="projects"
+      className="relative min-h-screen w-full overflow-x-hidden flex flex-col justify-center pb-32"
+    >
       {/* Particles */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {[...Array(30)].map((_, i) => (
           <span
             key={i}
-            className="absolute -bottom-5 rounded-full blur-[1px] animate-particle"
+            className="absolute -bottom-5 rounded-2xl blur-[1px] animate-particle"
             style={{
               left: `${Math.random() * 100}%`,
 
@@ -72,11 +75,26 @@ export default function Projects() {
           {/* Left container */}
           <div className="w-1/2 min-h-screen flex justify-center items-center flex-col">
             <h1 className="text-7xl font-semibold text-white leading-relaxed font-cormorant tracking-wide">
-              Featured Work
+              Featured{" "}
+              <span
+                style={{
+                  background: "linear-gradient(90deg, #22D3EE, #A855F7)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                  filter: "drop-shadow(0 0 24px rgba(34,211,238,0.3))",
+                }}
+              >
+                Work
+              </span>
             </h1>
             <p className="text-white/60 leading-relaxed text-lg max-w-sm">
               A collection of immersive web experiences, premium interfaces, and
               scalable full-stack applications.
+            </p>
+            <p className="mt-2.5 text-white/60 leading-relaxed text-sm max-w-sm tracking-widest">
+              Hover over any card and have a crazy interaction! <br />
+              Click on the card to visit the website.
             </p>
           </div>
 
@@ -94,7 +112,7 @@ export default function Projects() {
                     key={index}
                     initial={{
                       opacity: 0,
-                      y: 200,
+                      y: 300,
                       rotate: 0,
                       scale: 0.8,
                     }}
@@ -121,14 +139,16 @@ export default function Projects() {
                     }}
                     className="cursor-pointer absolute"
                   >
-                    <ProjectCard
-                      title={project.title}
-                      short_desc={project.short_desc}
-                      description={project.desc}
-                      image={project.image}
-                      github={project.github}
-                      tech={project.tech}
-                    />
+                    <a href={project.live} target="_blank">
+                      <ProjectCard
+                        title={project.title}
+                        short_desc={project.short_desc}
+                        description={project.desc}
+                        image={project.image}
+                        github={project.github}
+                        tech={project.tech}
+                      />
+                    </a>
                   </motion.div>
                 );
               })}
