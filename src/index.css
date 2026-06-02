@@ -222,6 +222,10 @@
   }
 }
 
+* {
+  cursor: none;
+}
+
 @layer utilities {
   /* Enables objects to handle genuine 3D space layers depth */
   .preserve-3d {

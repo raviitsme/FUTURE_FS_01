@@ -153,7 +153,7 @@ const Hero = () => {
               >
                 <div className="relative rounded-full bg-black">
                   <img
-                    src="/src/assets/ravi.jpeg"
+                    src="/ravi.jpeg"
                     alt="Ravi Mohan"
                     className="h-80 w-80 rounded-full object-cover opacity-95"
                   />
@@ -295,6 +295,7 @@ const Hero = () => {
             className="flex flex-wrap items-center gap-4"
           >
             <motion.button
+            data-cursor
               whileHover={{
                 scale: 1.08,
                 y: -2,
@@ -313,6 +314,7 @@ const Hero = () => {
             </motion.button>
 
             <motion.div
+              data-cursor
               whileHover={{
                 scale: 1.05,
               }}

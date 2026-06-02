@@ -139,7 +139,7 @@ export default function Projects() {
                     }}
                     className="cursor-pointer absolute"
                   >
-                    <a href={project.live} target="_blank">
+                    <a data-cursor href={project.live} target="_blank">
                       <ProjectCard
                         title={project.title}
                         short_desc={project.short_desc}

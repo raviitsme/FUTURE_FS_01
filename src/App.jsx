@@ -4,14 +4,16 @@ import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import Cursor from "./components/ui/Cursor";
 import './index.css'
+
 export default function App() {
   return (
     <>
-    <Cursor/>
+      <Cursor />  {/* ← outside the div, renders above everything */}
+
       <div className="bg-black font-heading min-h-screen">
         <Navbar />
         <Hero />
-        <Projects/>
+        <Projects />
         <AboutMe />
       </div>
     </>
